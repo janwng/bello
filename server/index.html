@@ -21,8 +21,22 @@
     </form>
 
     <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
     <script>
-      const socket = io();
+      $(function() {
+        const socket = io();
+        // when form is submitted
+        $('form').submit(function() {
+          // emit the value of the form's input field as 'chat message'
+          socket.emit('chat message', $('#m').val());
+          $('#m').val('');
+          return false;
+        });
+        // when message is recieved back from server
+        socket.on('chat message', function(msg) {
+          $('#messages').append($('<li>').text(msg));
+        });
+      });
     </script>
   </body>
 </html>
