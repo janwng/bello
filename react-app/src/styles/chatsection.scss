@@ -1,0 +1,29 @@
+.chat-section {
+  float: right;
+  background: tomato;
+  width: 95%;
+  height: 100vh;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.chatbox {
+  background: slategray;
+  width: 25%;
+  height: 45%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.message-list {
+  background: white;
+  width: 100%;
+  height: 80%;
+}
+
+.chatbar {
+  background: khaki;
+  width: 100%;
+  height: 17%;
+  margin-top: 10px;
+}
